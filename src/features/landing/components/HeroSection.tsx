@@ -4,6 +4,8 @@ import { ArrowRight, Play, TrendingDown, DollarSign, Zap, BarChart3 } from 'luci
 import { Button, Badge, Container } from '@/components/ui';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
 
+
+// Modifies Hero section
 export function HeroSection() {
   return (
     <section className="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden" id="hero">
