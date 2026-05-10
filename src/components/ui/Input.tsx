@@ -1,0 +1,35 @@
+import * as React from 'react';
+import { cn } from '@/lib/utils';
+
+export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  error?: boolean;
+  icon?: React.ReactNode;
+}
+
+export const Input = React.forwardRef<HTMLInputElement, InputProps>(
+  ({ className, type, error, icon, ...props }, ref) => {
+    return (
+      <div className="relative">
+        {icon && (
+          <div className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-500 pointer-events-none">
+            {icon}
+          </div>
+        )}
+        <input
+          type={type}
+          className={cn(
+            'flex h-11 w-full rounded-xl bg-surface-800/50 border border-surface-600/50 px-3 py-2 text-sm text-neutral-100 placeholder:text-neutral-500 transition-colors',
+            'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 focus-visible:border-primary-500',
+            'disabled:cursor-not-allowed disabled:opacity-50',
+            icon && 'pl-10',
+            error && 'border-danger-500 focus-visible:ring-danger-500/50 focus-visible:border-danger-500',
+            className
+          )}
+          ref={ref}
+          {...props}
+        />
+      </div>
+    );
+  }
+);
+Input.displayName = 'Input';

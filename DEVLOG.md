@@ -53,3 +53,29 @@
 - Design results page with cost breakdown charts
 
 ### End Of Day 1
+
+## Day 2 — 2026-05-11
+
+**Hours worked:** 6
+
+### What I did:
+- Built dynamic AI spend audit form using Zustand
+- Created reusable, styled form components (Input, Select, Label)
+- Added multi-tool support with dynamic tool selector
+- Implemented plan selectors and real-time pricing summaries
+- Added `localStorage` persistence via Zustand middleware
+- Improved form responsiveness and layout using 2-column CSS Grid
+- Drafted Database and API schemas in `docs/schemas.md`
+
+### What I learned:
+- Zustand's `persist` middleware is incredibly powerful and lightweight for saving form state locally.
+- Creating a robust `toolDatabase` of default prices significantly reduces user friction compared to manual input.
+- CSS Grid with `order` utility works perfectly for stacking sidebars on mobile.
+
+### Blockers / what I'm stuck on:
+- Optimizing dynamic pricing calculation performance if the number of tools grows large. Currently using simple reductions which is fine for small stacks.
+
+### Plan for tomorrow:
+- Build the audit engine (pure functions for identifying waste).
+- Design the Results Dashboard.
+- Generate optimization recommendations based on the inputs.

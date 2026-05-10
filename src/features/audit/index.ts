@@ -1,3 +1,4 @@
-// Audit feature module — Phase 2
-// Will contain: AuditForm, ToolSelector, CostInput, ProviderPicker components
-export {};
+export * from './components/AuditLayout';
+export * from './components/AuditWizard';
+export * from './store/useAuditStore';
+export * from './types';
