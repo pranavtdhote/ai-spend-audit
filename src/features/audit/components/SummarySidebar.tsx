@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router';
 import { useAuditStore } from '../store/useAuditStore';
 import { GlassCard, Button } from '@/components/ui';
 import { formatCurrency } from '@/lib/utils';
@@ -5,6 +6,7 @@ import { ArrowRight, Sparkles, AlertCircle } from 'lucide-react';
 import { TOOL_DATABASE } from '../constants/toolDatabase';
 
 export function SummarySidebar() {
+  const navigate = useNavigate();
   const { activeTools } = useAuditStore();
 
   const totalMonthly = activeTools.reduce((acc, tool) => acc + tool.monthlyCost, 0);
@@ -76,6 +78,7 @@ export function SummarySidebar() {
           disabled={activeTools.length === 0}
           icon={<ArrowRight className="w-4 h-4" />}
           className="justify-center"
+          onClick={() => navigate('/results')}
         >
           Generate Optimization Report
         </Button>

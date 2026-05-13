@@ -75,7 +75,46 @@
 ### Blockers / what I'm stuck on:
 - Optimizing dynamic pricing calculation performance if the number of tools grows large. Currently using simple reductions which is fine for small stacks.
 
+### End Of Day 2
+
+## Day 3 — 2026-05-12
+
+**Hours worked:** 7
+
+### What I did:
+- Built rule-based audit engine
+- Added savings recommendation logic
+- Implemented plan optimization analysis
+- Added recommendation confidence scoring
+- Created reusable pricing utility system
+
+### What I learned:
+- Learned how SaaS pricing structures influence optimization recommendations
+- Improved TypeScript utility architecture patterns
+
+### Blockers / what I'm stuck on:
+- Refining recommendation accuracy for mixed AI tooling stacks
+
 ### Plan for tomorrow:
-- Build the audit engine (pure functions for identifying waste).
-- Design the Results Dashboard.
-- Generate optimization recommendations based on the inputs.
+- Build premium audit results dashboard and AI-generated summaries
+
+### End Of Day 3
+
+## Day 4 — 2026-05-13
+
+**Hours worked:** 6
+
+### What I did:
+- Designed and built the Results Dashboard UI
+- Implemented the Spend Breakdown stacked bar chart
+- Created the AI Summary service with graceful fallback
+- Built the Recommendation Cards with expandable reasoning
+- Wired the `/audit` page to navigate to `/results` upon generation
+- Added `PROMPTS.md` and `TESTS.md` documentation
+- Ensured 100% TypeScript compliance across the new feature
+
+### What I learned:
+- Separating the calculation engine from the UI makes testing and typing much cleaner.
+- Using `useMemo` for the engine execution on the Results page ensures performance without unnecessary re-renders.
+
+### End Of Day 4
