@@ -118,3 +118,45 @@
 - Using `useMemo` for the engine execution on the Results page ensures performance without unnecessary re-renders.
 
 ### End Of Day 4
+
+## Day 5 — 2026-05-14
+
+**Hours worked:** 5
+
+### What I did:
+- Designed the Supabase Database Schema (Leads, Audits, Audit_Tools, RLS policies).
+- Drafted the Resend email service architecture for sending automated audit summaries.
+- Planned out the public `/share/:id` routing strategy for anonymized URLs.
+
+### What I learned:
+- Row Level Security (RLS) is incredibly powerful for implementing "shareable link" architecture. By defaulting `is_public = false`, I can ensure only explicitly shared audits are accessible without complex backend auth checks.
+
+### End Of Day 5
+
+## Day 6 — 2026-05-15
+
+**Hours worked:** 4
+
+### What I did:
+- Installed and configured Vitest for the pure-function Audit Engine.
+- Wrote 5 comprehensive unit tests ensuring math (duplicate coders, plan downgrades) works correctly.
+- Implemented a GitHub Actions workflow (`ci.yml`) to enforce testing and linting on every push.
+
+### What I learned:
+- Vitest's `jsdom` environment is significantly faster than Jest, and the configuration is seamlessly integrated with the existing Vite setup.
+
+### End Of Day 6
+
+## Day 7 — 2026-05-16
+
+**Hours worked:** 8
+
+### What I did:
+- Generated the massive "Startup Launch" documentation package (GTM, Economics, User Interviews, Landing Copy, Architecture).
+- Conducted final Lighthouse performance checks.
+- Prepped the repository for final submission to the hiring team and Vercel deployment.
+
+### What I learned:
+- Documentation is just as critical as the code. Structuring the GTM and Economics models forced me to rethink how the product is framed—from a simple "calculator" into a "lead generation asset for a consultation business."
+
+### End Of Day 7

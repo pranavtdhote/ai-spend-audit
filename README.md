@@ -1,102 +1,59 @@
-# NeuralCost — AI Spend Intelligence for Startups
+# NeuralCost
+**The definitive AI Spend Intelligence platform for startups.**
 
-> Stop overpaying for AI. Analyze, optimize, and cut your startup's AI tooling costs by up to 40%.
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue.svg)
+![React](https://img.shields.io/badge/React-19-61dafb.svg)
 
-**NeuralCost** is a modern SaaS application that helps startups understand and optimize their AI spending. Upload your AI provider invoices or connect via API, get instant cost analysis, waste detection, and actionable optimization recommendations — in under 60 seconds.
+NeuralCost helps modern startups eliminate redundant AI tooling, optimize seat licenses, and negotiate volume API pricing. Built for the founders and engineering leaders who want to maximize their AI ROI.
 
-## ✨ Features
-
-- **Cost Breakdown** — See where every dollar goes across 20+ AI providers
-- **Usage Analytics** — Track token consumption and API call patterns
-- **Waste Detection** — AI-powered analysis finds redundant calls and unused models
-- **Budget Alerts** — Slack/email notifications before costs spike
-- **Team Insights** — Attribute AI costs to teams, projects, or features
-- **Smart Recommendations** — Actionable suggestions to optimize spend
+## 🚀 Features
+- **Dynamic Stack Auditing**: Select from a curated database of AI tools (ChatGPT, Claude, Cursor, Copilot, etc.) to instantly map your current spend.
+- **Rule-Based Optimization Engine**: A deterministic, pure-function backend that identifies overlaps (e.g., Copilot vs. Cursor) and flags enterprise overspend.
+- **Real-Time Financial Dashboard**: View potential savings, category breakdowns, and AI-generated executive summaries.
+- **Local Persistence**: State is safely stored via Zustand `persist` (localStorage).
+- **Export & Share**: Generate anonymized, public URLs to share with stakeholders (Supabase Integration).
 
 ## 🛠 Tech Stack
+- **Frontend**: React 19, Vite 8, TypeScript (Strict TS6)
+- **Styling**: Tailwind CSS v4, Framer Motion
+- **State Management**: Zustand
+- **Backend/DB**: Supabase (PostgreSQL), Resend (Transactional Email)
+- **Testing & CI/CD**: Vitest, GitHub Actions
+- **Deployment**: Vercel
 
-| Layer | Technology |
-|-------|-----------|
-| Framework | React 19 + TypeScript |
-| Build Tool | Vite 8 |
-| Styling | Tailwind CSS v4 (CSS-native config) |
-| Routing | React Router v7 |
-| Animations | Motion (formerly Framer Motion) |
-| Icons | Lucide React |
-| SEO | react-helmet-async |
+## 📦 Getting Started
 
-## 🚀 Quick Start
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/pranavtdhote/ai-spend-audit.git
+   cd ai-spend-audit
+   ```
 
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**
+   Create a `.env` file:
+   ```env
+   VITE_SUPABASE_URL=your_supabase_url
+   VITE_SUPABASE_ANON_KEY=your_anon_key
+   RESEND_API_KEY=your_resend_key
+   ```
+
+4. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+## 🧪 Testing
+We use Vitest for unit testing the pure functions within the audit engine.
 ```bash
-# Clone the repository
-git clone https://github.com/your-username/neuralcost.git
-cd neuralcost
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-
-# Type check
-npm run typecheck
-
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
+npm run test
 ```
 
-The dev server starts at `http://localhost:5173`.
-
-## 📁 Project Architecture
-
-```
-src/
-├── components/          # Reusable UI components
-│   ├── ui/              # Design system primitives (Button, Card, Badge...)
-│   ├── layout/          # Navbar, Footer, RootLayout
-│   └── seo/             # SEOHead component
-├── features/            # Feature-specific modules
-│   ├── landing/         # Landing page sections
-│   └── audit/           # Audit form (Phase 2)
-├── hooks/               # Custom React hooks
-├── lib/                 # Utilities, constants, animation presets
-├── pages/               # Route-level page components
-├── styles/              # Global CSS + Tailwind theme
-└── types/               # Shared TypeScript types
-```
-
-## 📐 Design System
-
-- **Theme**: Dark-first design with optional light mode
-- **Colors**: Indigo primary (#6366f1), Emerald accent (#10b981)
-- **Typography**: Inter (Google Fonts)
-- **Components**: Button, Card, GlassCard, Badge, Container
-- **Effects**: Glassmorphism, gradient text, glow borders, float animations
-
-## 🗺 Roadmap
-
-- [x] **Phase 1** — Frontend foundation, design system, landing page
-- [ ] **Phase 2** — Audit form, local state persistence, results engine
-- [ ] **Phase 3** — Shareable reports, PDF export, team sharing
-- [ ] **Phase 4** — API integrations, real provider connections
-- [ ] **Phase 5** — User accounts, billing, analytics dashboard
-
-## 🚢 Deployment
-
-Build the production bundle:
-
-```bash
-npm run build
-```
-
-The output is in `dist/`. Deploy to any static hosting:
-- **Vercel**: `npx vercel`
-- **Netlify**: Connect repo and set build command to `npm run build`
-- **Cloudflare Pages**: Set build output directory to `dist`
-
-## 📄 License
-
-MIT
+## 📈 Deployment
+This project is configured for seamless deployment on Vercel. 
+Simply push to `main` and GitHub Actions will validate the build before Vercel deploys it to production.
